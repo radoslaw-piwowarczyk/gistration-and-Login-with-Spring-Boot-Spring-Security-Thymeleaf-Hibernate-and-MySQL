@@ -5,11 +5,11 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Collection;
 
-
 @Data
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
+@RequiredArgsConstructor
+@Builder
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
@@ -30,6 +30,5 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
-
 
 }
