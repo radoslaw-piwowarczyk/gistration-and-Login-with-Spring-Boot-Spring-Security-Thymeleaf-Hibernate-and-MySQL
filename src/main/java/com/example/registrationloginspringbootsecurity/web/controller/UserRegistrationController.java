@@ -17,8 +17,13 @@ public class UserRegistrationController {
     private final UserService userService;
 
     @GetMapping
-    private String showRegistrationForm(){
+    private String showRegistrationForm() {
         return "registration";
+    }
+
+    @ModelAttribute("user")
+    public UserRegistrationDto userRegistrationDto() {
+        return new UserRegistrationDto();
     }
 
     @PostMapping
