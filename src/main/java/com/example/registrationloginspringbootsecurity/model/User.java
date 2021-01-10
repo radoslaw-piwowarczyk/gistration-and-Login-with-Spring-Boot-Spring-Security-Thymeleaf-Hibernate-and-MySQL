@@ -8,7 +8,7 @@ import java.util.Collection;
 @Data
 @Entity
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Builder
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {

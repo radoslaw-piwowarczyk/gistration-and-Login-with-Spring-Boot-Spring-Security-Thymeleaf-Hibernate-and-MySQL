@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Builder
 @Data
 public class Role {
