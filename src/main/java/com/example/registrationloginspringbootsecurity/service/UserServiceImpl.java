@@ -4,6 +4,8 @@ import com.example.registrationloginspringbootsecurity.model.Role;
 import com.example.registrationloginspringbootsecurity.model.User;
 import com.example.registrationloginspringbootsecurity.repository.UserRepository;
 import com.example.registrationloginspringbootsecurity.web.dto.UserRegistrationDto;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -27,5 +29,10 @@ public class UserServiceImpl implements UserService {
                 .roles(Arrays.asList(Role.builder().name("ROLE_USER").build()))
                 .build();
         return userRepository.save(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return null;
     }
 }
