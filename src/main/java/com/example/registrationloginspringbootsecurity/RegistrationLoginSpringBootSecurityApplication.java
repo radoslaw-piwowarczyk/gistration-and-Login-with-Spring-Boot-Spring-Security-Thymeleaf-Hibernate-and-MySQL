@@ -8,6 +8,7 @@ public class RegistrationLoginSpringBootSecurityApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RegistrationLoginSpringBootSecurityApplication.class, args);
+
 	}
 
 }
